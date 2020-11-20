@@ -395,7 +395,7 @@ impl GlWindowDevice {
         let context_descriptor = device
             .create_context_descriptor(&context_attributes)
             .unwrap();
-        let mut context = device.create_context(&context_descriptor, None).unwrap();
+        let mut context = device.create_context(&context_descriptor).unwrap();
         device.make_context_current(&context).unwrap();
 
         let gl = match device.gl_api() {
